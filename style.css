@@ -1,0 +1,102 @@
+// Little hack to limit img size so they are no bigger than the screen
+body {
+    width: 100vw;
+}
+img {
+    max-width: 100%;
+}
+.shell-output {
+    font-family: monospace;
+    display: block;
+    width: 95%;
+    width: 90vw;
+    background: #272822;
+    padding: 1.5px;
+    overflow-x : auto;
+    color: rgb(200, 200, 200);
+    border: 1px solid #272822;
+    border-radius: 4px;
+}
+
+.break-instd-scroll {
+    overflow: hidden;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    white-space: pre-wrap;
+    word-wrap: break-word; // Destroy words mwahaha
+}
+
+.command-output {
+    display: inline-block;
+    padding: 2px;
+    margin-bottom: 3px;
+    border-bottom: 1px dashed black;
+    max-width: 95%;
+    overflow-x: auto;
+}
+.service-status {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 4px;
+    margin: 2px;
+    margin-top: 4px;
+    overflow-x: auto;
+}
+.service-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.service-status-info {
+    display: inline-block;
+    background-color: grey;
+    padding: 4px;
+    border: 1px dashed black;
+    border-radius: 3px;
+}
+.active {
+    background-color: green;
+}
+.activating {
+	background-color: #90EE90;
+}
+.inactive {
+    background-color: grey;
+}
+.disabled {
+    background-color: rgb(220,220,200);
+}
+.failed {
+    background-color: red;
+}
+.non-existent{
+	background-color: purple;
+}
+
+
+.graph{
+    width : 75%;
+    height: 384px;
+    margin: 8px auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .graph {
+        width: 90%;
+        height: 192px
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(10, 10, 10);
+        color: white;
+    }
+    .code {
+        background-color: rgb(90, 92, 92);
+    }
+    .service-status {
+        border-color: white;
+    }
+}
